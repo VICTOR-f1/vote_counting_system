@@ -1,4 +1,4 @@
-Проект написан в октябре 2023 
+Проект написан в октябре 2023 <br/>
 Демонстрация 
 ![image](https://github.com/VICTOR-f1/vote_counting_system/assets/100849703/cea313f2-c8a3-4a4a-8f70-833322c4cc76)
 ![image](https://github.com/VICTOR-f1/vote_counting_system/assets/100849703/5c9de597-b995-4890-a578-0dfa9ed8ad59)

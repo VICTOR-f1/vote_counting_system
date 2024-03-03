@@ -1,0 +1,48 @@
+﻿@using electronic_library_6.Domain.Entities;
+@model DeleteBookViewModel;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="book-form">
+    <form method="post" enctype="multipart/form-data">
+        <h1>Удаление книги</h1>
+       <div class="form-element">
+            <label asp-for="TotalNumberPeopleVoted"></label>
+            <input asp-for="TotalNumberPeopleVoted" />
+        </div>
+        <div class="form-element">
+            <label asp-for="BallotsAllocatedSite"></label>
+            <input asp-for="BallotsAllocatedSite" />
+        </div>
+        <div class="form-element">
+            <label asp-for="BallotsMissingIncorrect"></label>
+            <input asp-for="BallotsMissingIncorrect" />
+        </div>
+        <div class="form-element">
+            <label asp-for="CategoryId"></label>
+            <input asp-for="Id" type="hidden" />
+            <select asp-for="CategoryId" asp-items="Model.Categories"></select>
+        </div>
+           <div class="form-element">
+            <label asp-for="PollingStationsId"></label>
+            <input asp-for="Id" type="hidden" />
+            <select asp-for="PollingStationsId" asp-items="Model.PollingStations"></select>
+        </div>
+        <div asp-validation-summary="All" class="error-messages"></div>
+        <div class="form-element form-element-buttons">
+            <input type="button" id="backButton" value="Назад" />
+            <input type="submit" value="Удалить" />
+        </div>
+    </form>
+</div>
+
+<script>
+    // получаем кнопку по ее селектору CSS
+    let backButton = document.querySelector('#backButton');
+    // добавляем обработчик события
+    backButton.onclick = () => {
+        window.location = "/books/index";
+    };
+</script>

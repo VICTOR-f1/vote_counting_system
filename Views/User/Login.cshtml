@@ -1,0 +1,33 @@
+﻿@model LoginViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/styles/login.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <form method="post">
+                <h1>Система для подсчета голосов на избирательных участках</h1>
+                <h2>Вход в систему</h2>
+                <label asp-for="Username">Имя пользователя:</label>
+                <input type="text" name="username" />
+                <label asp-for="Password">Пароль:</label>
+                <input type="password" name="password" />
+                <p>Или вы можете <a asp-controller="User" asp-action="Registration">зарегистрироваться</a></p>
+                <div asp-validation-summary="All"></div>
+                <input type="submit" value="Вход в систему" />
+            </form>
+        </div>
+        <div class="side-image">
+        </div>
+    </div>
+</body>
+</html>

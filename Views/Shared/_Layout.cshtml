@@ -1,0 +1,42 @@
+﻿@using electronic_library_6.Domain.Entities;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/styles/main.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="wrapper-center">
+        <!--ШАПКА-->
+        <header>
+            <nav>
+                <div class="brand">
+                   
+                        <h1>Cистема для подсчета голосов на избирательных участках</h1>
+                    
+                </div>
+                <div class="links">
+                    <ul>    
+                            <a class="add-link" href="/books/addbook">Добавить результаты голосования</a>
+                            
+                        <li><a asp-controller="User" asp-action="Logout">Выход</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--ОСНОВНАЯ ЧАСТЬ-->
+        <main>
+            <div class="content">
+                @RenderBody()
+            </div>
+            
+        </main>
+        <!--ПОДВАЛ-->
+        <footer>
+            <p>Разработал Фарносов.В.А  в 2023 году</p>
+        </footer>
+    </div>
+</body>
+</html>

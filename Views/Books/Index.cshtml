@@ -1,0 +1,86 @@
+﻿@using electronic_library_6.Domain.Entities;
+@model BooksCatalogViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="books-container">
+    <div class="categories-list">
+        @if (User.IsInRole("OlderAdmin"))
+        {
+                    
+
+            <h2 class="category">Название голосования</h2>
+            <ul>
+                @foreach (Categories vot in Model.Categories)
+                {
+                    <li>
+                                <a asp-controller="Books" asp-action="Index" asp-route-categoryId="@vot.Id">
+                            @vot.Name
+                        </a>
+                               
+                                
+                    </li>
+                }
+
+            </ul>
+        }
+        @if (User.IsInRole("JuniorAdmin"))
+        {     
+              <style>.categories-list{background-color:#ffffff}</style>
+              <label>Нет доступа.</label>
+                    
+            
+                         
+        }
+    </div>
+
+    <div class="books-list">
+        @if (User.IsInRole("OlderAdmin")) {
+            <style>.books-list{background-color:#dfd8e9}</style>
+            
+        
+            <div class="searchbar">
+                <form>
+                    <label>Найти участок: </label>
+                    <input type="text" placeholder="Укажите название" name="searchstring"/>
+                    <input type="submit" value="Найти"/>
+                </form>
+            </div>
+        }
+        @if (User.IsInRole("JuniorAdmin"))
+        {
+            <style>.books-container{background-color:#ffffff}</style>
+            <label>Нет доступа.</label>
+        }
+        @if (User.IsInRole("OlderAdmin"))
+        {
+            @foreach (Book book in Model.Books)
+            {
+              
+              <div class="book-card">
+                 <div class="left-card">
+                   <h2>Участок:@book.PollingStations.Name</h2>
+                   <p>вася:3500</p>
+                   <p>миша:4500</p>
+                   <p>илья:4750</p>        
+                   <p>витя:3240</p>
+                 </div>
+                  <div class="right-card">
+                   <h2>Число проголосовавших:@book.TotalNumberPeopleVoted</h2>      
+                   <p>Бюллетени выданные на участок:@book.BallotsAllocatedSite</p>
+                   <p>Пропавшие или неправильно заполненные бюллетени:@book.BallotsMissingIncorrect</p> 
+                    @if (User.IsInRole("OlderAdmin"))
+                    {<div class="placeholder-div"></div>
+                      <div class="book-card-actions">                              
+                         <a class="link-button"  asp-action="DeleteBook" asp-controller="Books" asp-route-bookId="@book.Id">Удалить</a>
+                      </div>
+                    } 
+                 </div>
+              </div>
+            }
+        }
+
+    </div>
+</div>

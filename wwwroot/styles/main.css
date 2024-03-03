@@ -1,0 +1,274 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+.brand h1 {
+    font-weight: 300;
+}
+.links a {
+    padding-left: 2em;
+    
+}
+
+.wrapper-center {
+    max-width: 1200px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #E9E8E0;
+}
+
+header {
+    min-height: 360px;
+    background-image: url('/images/ban3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    flex-grow: 1;
+    background: #dfd8e9;
+}
+
+footer {
+    height: 2em;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    background: #E9E8E0;
+    height: 3em;
+    margin: 1em 2em;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 2em;
+}
+nav a:link {
+    text-decoration: none;
+    color: #242C35;
+}
+.content {
+    background: #dfd8e9;
+}
+nav a:visited {
+    text-decoration: none;
+    color: #242C35;
+}
+.links a:hover {
+    color: #ff0000;
+}
+.links ul {
+    list-style-type: none;
+    display: flex;
+}
+.links li {
+    flex-grow: 1;
+    margin-right: 2em;
+}
+.books-container {
+    display: flex;
+    flex-flow: row;
+}
+
+.categories-list {
+    background: #251f66;
+    min-width: 300px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-form {
+    background: #251f66;
+    padding: 1em;
+    margin: 1em;
+    justify-content: center;
+}
+
+.book-form h1 {
+    margin-bottom: 30px;
+    color: #E9E8E0;
+    text-align: center;
+}
+
+.form-element {
+    color: #E9E8E0;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-element label {
+    min-width: 330px;
+    margin-bottom: 20px;
+    padding: 0 0 0 80px;
+}
+
+.form-element input {
+    flex-grow: 1;
+    border-radius: 5px;
+    height: 25px;
+    max-width: 700px;
+}
+
+.form-element select {
+    background: #E9E8E0;
+    border-radius: 5px;
+    height: 25px;
+    max-width: 550px;
+}
+
+.book-form input[type="submit"] {
+    background: #E9E8E0;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    color: black;
+}
+
+.book-form input[type="button"] {
+    background: #E9E8E0;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    color: black;
+}
+
+.books-list {
+    
+    flex-grow: 1;
+}
+.categories-list ul {
+    list-style: none;
+}
+
+.categories-list a:link, .categories-list a:visited {
+    color: #E9E8E0;
+    text-decoration: none;
+}
+
+.categories-list li {
+   
+    margin-bottom: 0.8em;
+    margin-left: 0.6em;
+}
+
+.categories-list a:hover {
+    color: #ff0000;
+}
+.book-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    background: #251f66;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    color: #E9E8E0;
+    
+}
+.book-card-left {
+    min-width: 350px;
+    color: #9383d4;
+}
+.book-card-right {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    background: #322a8c;
+}
+.book-card p {
+    margin-bottom: 0.6em;
+ 
+}
+.book-card-right h3 {
+    margin-bottom: 1em;
+}
+
+.book-card-right a {
+    margin-top: 1em;
+    align-self: flex-end;
+    
+}
+
+.link-button {
+    padding: 0.3em 0.5em;
+    background: #E9E8E0;
+    border-radius: 5px;
+}
+.link-button2 {
+    padding: 0.3em 0.5em;
+    background: #E9E8E0;
+    border-radius: 5px;
+   
+}
+
+.link-button:hover {
+    background: #ff0000;
+}
+
+.link-button:link,
+.link-button:visited {
+    text-decoration: none;
+    color: #242C35;
+}
+.book-card-actions {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-link {
+    color: #251f66;
+    text-align: end;
+}
+
+.add-div {
+    margin: 1em;
+    text-align: end;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.searchbar {
+    border-radius: 10px;
+    background: #251f66;
+    padding: 1em;
+    margin: 1em;
+    align-items: center;
+}
+
+.searchbar form{
+    display: flex;
+    align-items: center;
+}
+.searchbar label{
+    color: #ffffff;
+}
+.searchbar input[type="text"]{
+    flex-grow: 1;
+    padding: 0.5em;
+    margin: 0.3em;
+    border-radius: 5px;
+}
+.searchbar input[type="submit"] {
+    background: #E9E8E0;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.searchbar input[type="submit"]:hover{
+    background:#ff0000;
+}
+.placeholder-div{
+    flex-grow: 1;
+}
